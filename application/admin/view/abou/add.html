@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>上海攸攸网络科技有限公司</title>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="__PUBLIC__/lib/html5shiv.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="__PUBLIC__/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/lib/jquery/jquery.form.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+ 
+</head>
+<body>
+<block name="main">
+
+</block>
+<script type="text/javascript" src="__PUBLIC__/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script>
+/*图片相关*/
+function getObjectURL(file) {
+    var url = null;
+    if(window.createObjectURL != undefined) { // basic  
+        url = window.createObjectURL(file);
+    } else if(window.URL != undefined) { // mozilla(firefox)  
+        url = window.URL.createObjectURL(file);
+    } else if(window.webkitURL != undefined) { // webkit or chrome  
+        url = window.webkitURL.createObjectURL(file);
+    }
+    return url;
+}  
+//弹出层
+function layer_show(title,url,w,h){
+    layer.open({
+        type: 2,
+        title: title,
+        maxmin: true, //开启最大化最小化按钮
+        area: [w+'px', h+'px'],
+        content: url
+    });
+}
+function layer_full(title,url){
+    var index = layer.open({
+        type: 2,
+        title: title,
+        content: url
+    });
+    layer.full(index);
+} 
+</script>
+</body>
+</html>
+<block name="main">
+<article class="page-container">
+    <form method="post" id="myForm">
+    <table class="table table-border table-bordered table-bg">
+        <thead>
+            <tr>
+                <th colspan="20">基本信息</th>
+            </tr>
+        </thead>
+        <tbody>      
+ <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>定制热线：</th>
+            <td>
+                <input type="text" class="input-text" name="d_ipone" >
+            </td>
+        </tr>
+         <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>客户热线：</th>
+            <td>
+                <input type="text" class="input-text" name="k_ipone" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>传真：</th>
+            <td>
+                <input type="text" class="input-text" name="code" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>邮编：</th>
+            <td>
+                <input type="text" class="input-text" name="fax" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r"><span class="c-red">*</span>公司地址(Address)：</th>
+            <td>
+                <textarea name="address" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" ></textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+            </td>
+         </tr>
+         <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>公司邮箱：</th>
+            <td>
+                <input type="text" class="input-text" name="email" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>企业邮箱：</th>
+            <td>
+                <input type="text" class="input-text" name="q_email" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>QQ号码：</th>
+            <td>
+                <input type="text" class="input-text" name="qq" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r"><span class="c-red">*</span>新闻封面图：</th>
+            <td colspan="5">
+                <img src="__PUBLIC__/static/imgs/default.jpg" id="img0" width="100" height="70" >
+                <span class="btn-upload form-group">
+                <a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont"></i> 浏览文件</a>
+                <input type="file" name="uploadfile" class="input-file" id="img">
+                </span>
+                <p><span style="color:orange;">建议使用宽150像素-高150像素内的图片；点击下方"提交"按钮后生效。</span></p>
+            </td>
+         </tr>
+           <thead>
+         <tr>
+            <th colspan="20">公司简介</th>
+        </tr>
+        </thead>
+         <tr>
+            <th class="text-r"><span class="c-red">*</span>公司简介:</th>
+            <td>
+                <div class="col-xs-12 col-sm-12">
+                    <textarea class="textarea"  name="content"></textarea>
+                </div>
+            </td>
+         </tr>
+         
+         
+         <tr class="text-c">
+            <td colspan="20"><input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;"></td>
+         </tr>
+        </tbody>
+    </table>
+    </form>
+</article>
+<link rel="stylesheet" href="__PUBLIC__/edit/themes/default/default.css" />
+<link rel="stylesheet" href="__PUBLIC__/edit/plugins/code/prettify.css" />
+<script charset="utf-8" src="__PUBLIC__/edit/kindeditor.js"></script>
+<script charset="utf-8" src="__PUBLIC__/edit/lang/zh_CN.js"></script>
+<script type="text/javascript">
+KindEditor.ready(function(K) {
+        var editor1 = K.create('textarea[name="content"]', {
+            cssPath : '__PUBLIC__/edit/plugins/code/prettify.css',
+            uploadJson : '__PUBLIC__/edit/php/upload_json.php',
+            fileManagerJson : '__PUBLIC__/edit/php/file_manager_json.php',
+            allowFileManager : true,
+             height : "300px",
+            afterBlur: function(){this.sync();}
+        });
+    });
+</script>
+<script type="text/javascript">
+$(function(){
+    var options = { 
+        beforeSubmit:  showRequest,
+        success:       showResponse,
+        resetForm: true, 
+        dataType:  'json' 
+    }; 
+    $('#myForm').submit(function() { 
+        $(this).ajaxSubmit(options);
+        return false; 
+    }); 
+
+});
+
+
+function showRequest(formData, jqForm, options) { 
+    index = layer.load();
+    return true; 
+} 
+
+function showResponse(responseText, statusText)  { 
+    if(responseText == 1){
+        layer.msg('添加成功！',{icon: 1,time: 1000},function(){
+            window.parent.location.reload();
+        });
+    }else{
+        layer.close(index);
+        layer.msg(responseText,{icon: 2,time: 1000, shift:6});
+    }
+}
+/*图片相关*/
+    $("#img").change(function() {
+        // this.files[0]代表的是选择的文件资源的第一个，因为上面写了 multiple="multiple" 就表示上传文件可能不止一个
+        var objUrl = getObjectURL(this.files[0]);
+        if(objUrl) {
+            // 在这里修改图片的地址属性
+            $("#img0").attr("src", objUrl);
+        }
+    });
+
+</script>
+</block>

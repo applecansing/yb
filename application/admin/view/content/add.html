@@ -1,0 +1,153 @@
+{include file="layout:index"/}
+<block name="main">
+<article class="page-container">
+    <form method="post" id="myForm" enctype="multipart/form-data" >
+    <table class="table table-border table-bordered table-bg">
+        <thead>
+            <tr>
+                <th colspan="20">基本信息</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>标题</th>
+            <td>
+                <input type="text" class="input-text" name="title" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r"><span class="c-red">*</span>封面图片：</th>
+            <td colspan="5">
+                <img src="__PUBLIC__imgs/default.jpg" id="img0" width="100" height="70" >
+                <span class="btn-upload form-group">
+                <a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont"></i> 浏览文件</a>
+                <input type="file" name="uploadfile" class="input-file" id="img">
+                </span>
+                <p><span style="color:orange;"><!-- 建议使用宽150像素-高150像素内的图片； -->点击下方"提交"按钮后生效。</span></p>
+            </td>
+         </tr> 
+         <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>分类</th>
+            <td>
+                <select name="cat_id">
+                    {foreach $cate as $catv}
+                    <option value="{$catv.id}">{$catv.title}</option>
+                    {/foreach}
+                </select>
+            </td>
+        </tr> 
+        <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>设计年份</th>
+            <td>
+                <input type="text" class="input-text" name="sheji_time" >
+            </td>
+        </tr>
+        <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>建成时间</th>
+            <td>
+                <input type="text" class="input-text" name="jian_time" >
+            </td>
+        </tr>
+        <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>建设地点</th>
+            <td>
+                <input type="text" class="input-text" name="address" >
+            </td>
+        </tr>
+        <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>建设面积</th>
+            <td>
+                <input type="text" class="input-text" name="mianji" >
+            </td>
+        </tr>
+           <tr>
+
+                <th class="text-r"><span class="c-red">*</span>图片：</th>
+                <td colspan="5">
+                <span style="display:block; overflow:hidden;">
+                    <span style="display:block; float:left;">
+                        <p id="tupian"></p>
+                    </span>
+
+                    <span style="display:block; float:left; margin-top:20px; margin-left:10px;">
+                    <span class="btn-upload form-group">
+                    <a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont"></i> 浏览文件</a>
+                    <input type="file" name="uploadfilet[]" class="input-file" id="image" multiple="true">
+                    </span>
+                    </span>
+                </span>
+                <p style="margin-bottom:0px;"><span style="color:orange;"><!-- 建议使用宽150像素-高150像素内的图片； -->点击下方"提交"按钮后生效。</span></p>
+
+                </td>
+
+                </tr>
+
+        <tr>
+        <th class="text-r" width="15%"><span class="c-red">*</span>排序</th>
+            <td>
+                <input type="text" class="input-text" name="xu" >
+            </td>
+        </tr>
+        
+         <tr class="text-c">
+            <td colspan="20"><input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;"></td>
+         </tr>
+        </tbody>
+    </table>
+    </form>
+</article>
+<script type="text/javascript">
+/*图片相关*/
+    $("#img").change(function(){
+        // this.files[0]代表的是选择的文件资源的第一个，因为上面写了 multiple="multiple" 就表示上传文件可能不止一个
+        var objUrl = getObjectURL(this.files[0]);
+        //blob:http://www.qizhi.com:8888/21c255bd-941c-974e-af33-d6418c00f486
+        //console.info(objUrl);
+        if(objUrl) {
+            // 在这里修改图片的地址属性
+            $("#img0").attr("src", objUrl);
+            // $("#img01").attr("src", objUrl);
+        }
+    });
+
+    $('#image').change(function(){
+        var tuz = this.files;
+        var ge = tuz.length;
+        var tu = new Array();
+        var tuhtml = '';
+        for(var i=0; i<tuz.length; i++)
+        {
+            tu[i] = getObjectURL(this.files[i]);
+            tuhtml+="<img src='"+getObjectURL(this.files[i])+"' style='width:100px; height:70px; margin-left:5px;' >";
+        }
+        document.getElementById("tupian").innerHTML= tuhtml;
+    })
+
+$(function(){
+    var options = { 
+        beforeSubmit:  showRequest,
+        success:       showResponse,
+        resetForm: true, 
+        dataType:  'json' 
+    }; 
+    $('#myForm').submit(function() { 
+        $(this).ajaxSubmit(options);
+        return false; 
+    }); 
+});
+function showRequest(formData, jqForm, options) { 
+    index = layer.load();
+    return true; 
+} 
+function showResponse(responseText, statusText)  { 
+    if(responseText == 1){
+        layer.msg('添加成功！',{icon: 1,time: 1000},function(){
+            window.parent.location.reload();
+        });
+    }else{
+        layer.close(index);
+        layer.msg(responseText,{icon: 2,time: 1000, shift:6});
+    }
+}
+</script>
+</block>

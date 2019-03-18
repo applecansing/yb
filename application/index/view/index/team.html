@@ -1,0 +1,39 @@
+{include file="common/header"/}
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="__COMMON__images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="__COMMON__images/linkiconhome.gif" alt="" class="center">网站首页<img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>机构介绍</span><img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>核心团队</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>机构介绍<br><span>introduce</span></div>
+		</div>
+		<ul>
+			<li><a href="{:url('index/Index/about')}">机构介绍</a></li>
+			<li><a href="{:url('index/Index/team')}" class="nav">核心团队</a></li>
+			<li><a href="{:url('index/Index/joinus')}">加入机构</a></li>
+			<li><a href="{:url('index/Index/contact')}">联系我们</a></li>
+		</ul>
+	</div>
+	<div class="team-list">
+	{volist name="listsix" id="val"}
+		<dl>
+			<dt><a href="{:url('index/Index/teamdata',array('id'=>$val.id))}"><img src="{$val.img}" alt=""></a></dt>
+			<dd>
+				<div class="team-tit"><a href="{:url('index/Index/teamdata',array('id'=>$val.id))}">{$val.name}</a></div>
+				<div class="team-tui">{$val.zhiwei}</div>
+			</dd>
+		</dl>
+   {/volist}
+	</div>
+	{$page}
+	<!-- <ul class="pagination"><li class="disabled"><span>&laquo;</span></li> <li class="active"><span>1</span></li><li><a href="/news.html?page=2">2</a></li><li><a href="/news.html?page=3">3</a></li><li><a href="/news.html?page=4">4</a></li><li><a href="/news.html?page=5">5</a></li><li><a href="/news.html?page=6">6</a></li><li><a href="/news.html?page=7">7</a></li><li><a href="/news.html?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="/news.html?page=12">12</a></li><li><a href="/news.html?page=13">13</a></li> <li><a href="/news.html?page=2">&raquo;</a></li></ul> -->
+</div>
+<!-- 底部 -->
+{include file="common/footer"/}

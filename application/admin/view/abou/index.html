@@ -1,0 +1,96 @@
+{include file="layout:index"/}
+<block name="main">
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span>联系我们<span class="c-gray en">&gt;</span>信息<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="cl pd-5 bg-1 bk-gray">
+	 <a class="btn btn-primary radius" onclick="product_edit('添加','{:url("add")}')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加</a>
+</div>
+<div class="page-container">
+	<table class="table table-border table-bordered table-bg table-hover table-sort">
+		<thead>
+			<tr class="text-c">
+				<th width="20">编号</th>
+				<th width="50">公司地址</th>
+				<th width="50">定制热线</th>
+				<th width="50">客户热线</th>
+				<th width="50">传真</th>
+				<th width="50">邮编</th>
+				<th width="50">公司邮箱</th>
+				<th width="50">企业邮箱</th>
+				<th width="50">QQ号码</th>
+				<th width="50">微信图片</th>
+				<th width="50">公司简介</th>
+				<th width="100">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		<volist name="data" id="vo">
+		{foreach $data as $vo}
+			<tr class="text-c">
+				<td>{$vo.id}</td>
+				<td>{$vo.address}</td>
+				<td>{$vo.d_ipone}</td>
+				<td>{$vo.k_ipone}</td>
+				<td>{$vo.fax}</td>
+				<td>{$vo.code}</td>
+				<td>{$vo.email}</td>
+				<td>{$vo.q_email}</td>
+				<td>{$vo.qq}</td>
+				<td><img src="{$vo.wei_img}" style="width:100px; height=75px; ">
+                <td>{$vo.content}</td>
+				</td>
+				<td class="td-manage">
+					<a class="btn btn-secondary radius" onClick="product_edit('编辑','{:url('edit',array('id'=>$vo["id"]))}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe647;</i>编辑</a>
+					<a class="btn btn-danger radius" data-index="" onClick="product_del(this,'{$vo.id}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i>删除</a></td>
+			</tr>
+			{/foreach}
+			<tr>
+				<td colspan="20" class="text-l">
+					<div class="col-xs-2 col-sm-3">
+						
+					</div>
+					<div class="col-xs-8 col-sm-6">
+						<span id="page"></span>
+					</div>
+					<div class="col-xs-2 col-sm-3">
+						共有数据：<strong>{$count}</strong> 条数据
+					</div>
+				</td>
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+//编辑
+function product_edit(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+};
+
+//新闻删除
+function product_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+        $.ajax({
+            type: 'POST',
+            url: '{:url("del")}',
+            dataType: 'json',
+            data: {id:id},
+            success: function(data){
+                if(data.code ==1){
+                    layer.msg(data.msg,{icon:1,time:1000});
+                    $(obj).parents("tr").remove();
+                    window.location.reload();
+                }else{
+                    layer.msg(data.msg,{icon:2,time:1000});
+				}
+            },
+        });     
+    });
+}
+</script>
+</block>

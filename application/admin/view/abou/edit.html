@@ -1,0 +1,104 @@
+{include file="layout:index"/}
+<block name="main">
+<article class="page-container">
+	<form method="post" id="myForm">
+	<table class="table table-border table-bordered table-bg">
+		<input type="hidden" name="id" value="{$data.id}">
+	    <thead>
+	        <tr>
+	            <th colspan="20">基本信息</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+
+	    <tr>
+          <th class="text-r" width="15%"><span class="c-red">*</span>电话：</th>
+            <td>
+                <input type="text" class="input-text" name="ipone" value="{$data.ipone}">
+            </td>
+        </tr>
+         <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>邮箱：</th>
+            <td>
+                <input type="text" class="input-text" name="email" value="{$data['email']}" >
+            </td>
+        </tr>
+        <tr>
+            <th class="text-r" width="15%"><span class="c-red">*</span>传真：</th>
+            <td>
+                <input type="text" class="input-text" name="ipone_c" value="{$data['ipone_c']}" >
+            </td>
+        </tr>
+      
+        <tr>
+            <th class="text-r"><span class="c-red">*</span>地址：</th>
+            <td>
+                <textarea name="address" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" >{$data['address']}</textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+            </td>
+         </tr>
+         <tr class="text-c">
+            <td colspan="20"><input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;"></td>
+         </tr> -
+	    </tbody>
+	</table>
+	</form>
+</article>
+<link rel="stylesheet" href="__PUBLIC__edit/themes/default/default.css" />
+<link rel="stylesheet" href="__PUBLIC__edit/plugins/code/prettify.css" />
+<script charset="utf-8" src="__PUBLIC__edit/kindeditor.js"></script>
+<script charset="utf-8" src="__PUBLIC__edit/lang/zh_CN.js"></script>
+<script type="text/javascript">
+KindEditor.ready(function(K) {
+        var editor1 = K.create('textarea[name="content"]', {
+            cssPath : '__PUBLIC__edit/plugins/code/prettify.css',
+            uploadJson : '__PUBLIC__edit/php/upload_json.php',
+            fileManagerJson : '__PUBLIC__edit/php/file_manager_json.php',
+            allowFileManager : true,
+             height : "300px",
+            afterBlur: function(){this.sync();}
+        });
+    });
+</script>
+<script type="text/javascript">
+$(function(){
+    var options = { 
+        beforeSubmit:  showRequest,
+        success:       showResponse,
+        resetForm: true, 
+        dataType:  'json' 
+    }; 
+    $('#myForm').submit(function() { 
+        $(this).ajaxSubmit(options);
+        return false; 
+    }); 
+});
+
+
+function showRequest(formData, jqForm, options) { 
+    index = layer.load();
+    return true; 
+} 
+
+function showResponse(responseText, statusText)  { 
+    if(responseText == 1){
+        layer.msg('修改成功！',{icon: 1,time: 1000},function(){
+            window.parent.location.reload();
+        });
+    }else{
+        layer.close(index);
+        layer.msg(responseText,{icon: 2,time: 1000, shift:6});
+    }
+}
+
+/*图片相关*/
+    $("#img").change(function() {
+        // this.files[0]代表的是选择的文件资源的第一个，因为上面写了 multiple="multiple" 就表示上传文件可能不止一个
+        var objUrl = getObjectURL(this.files[0]);
+        if(objUrl) {
+            // 在这里修改图片的地址属性
+            $("#img0").attr("src", objUrl);
+        }
+    });
+</script>
+</block>

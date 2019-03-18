@@ -1,0 +1,42 @@
+{include file="common/header"/}
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="__COMMON__images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="__COMMON__images/linkiconhome.gif" alt="" class="center">网站首页<img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>业绩展示</span><img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>片区开发PPP项目</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>业绩展示<br><span>Performance</span></div>
+		</div>
+		<ul>
+		{volist name="type" id="val"}
+			<li><a href="{:url('index/Index/product',array('id'=>$val.id))}" {if condition="$val['id'] eq $id"}class="nav"{/if}>{$val.name}</a></li>
+		{/volist}	
+		</ul>
+	</div>
+	<div class="news-list">
+
+		{volist name="prod" id="vall"}
+		<dl>
+			<dt><a href="{:url('index/Index/productdata',array('id'=>$vall.id))}"><img src="{$vall.img}" alt=""></a></dt>
+			<dd>
+				<a href="{:url('index/Index/productdata',array('id'=>$vall.id))}">
+					<span>{$vall.time}</span>
+					<h1>{$vall.title}</h1>
+					<p>{$vall.zhaiyao}</p>
+				</a>
+			</dd>
+		</dl>
+		{/volist}
+	</div>
+	{$page}
+	<!-- <ul class="pagination"><li class="disabled"><span>&laquo;</span></li> <li class="active"><span>1</span></li><li><a href="/news.html?page=2">2</a></li><li><a href="/news.html?page=3">3</a></li><li><a href="/news.html?page=4">4</a></li><li><a href="/news.html?page=5">5</a></li><li><a href="/news.html?page=6">6</a></li><li><a href="/news.html?page=7">7</a></li><li><a href="/news.html?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="/news.html?page=12">12</a></li><li><a href="/news.html?page=13">13</a></li> <li><a href="/news.html?page=2">&raquo;</a></li></ul> -->
+</div>
+<!-- 底部 -->
+{include file="common/footer" /}

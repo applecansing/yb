@@ -1,0 +1,88 @@
+@charset='utf-8';
+/* 内页广告 */
+.page_banner{ width: 100%; height: 220px; overflow: hidden; position: relative; }
+.page_banner img{ width: 1920px; height:220px; position: absolute; left: 50%; margin-left: -960px;  }
+
+/* 内页公共 */
+@font-face {
+	font-family:tell_font;
+	src:url(../font/my_font.ttf);
+	src:url(../font/my_font.eot);
+	src:url(../font/my_font.svg);
+	src:url(../font/my_font.woff);
+}
+.page_box{ width: 1100px; height: auto; padding: 30px 0; margin: 0 auto; overflow: hidden;}
+.pg_left{ width: 180px; height: auto; float: left; }
+.pg_left .pg_left_title{ width: 180px; height: 50px; line-height: 50px; font-size:18px; font-weight: bold; color: #cf001e;}
+.pg_left .pg_left_title em{ font-style: normal; display: block; width: auto; height: 50px; line-height: 50px; float: left; }
+.pg_left .pg_left_title span{ font-weight: normal; font-family: tell_font; font-size: 20px; color: #c1c1c1; line-height: 51px;}
+.pg_left .pg_left_list{ width: 180px; height: auto; margin-bottom: 20px;}
+.pg_left .pg_left_list ul li{ display: block; width: 100%; height: 49px; }
+.pg_left .pg_left_list ul li a{ display: block; width: 100%; height: 48px; border-bottom: solid 1px #ccc; line-height: 48px; text-align: center; font-size: 14px; }
+.pg_left .pg_left_list ul li a:hover{ background: #cf001e; color: #fff; border-bottom-color: #cf001e; }
+.pg_left .pg_left_list ul li .list_btn_a{ background: #b6001a; color: #fff; border-bottom-color: #cf001e; }
+.pg_left h1{ display: block; width: 100%; height: 37px; line-height: 37px; font-weight: normal; font-size: 14px; color: #b6001a; }
+.pg_left span{ display: block; width: 100%; height: auto; line-height: 24px; }
+
+.pg_right{ width: 888px; height: auto; float: left; margin-left: 32px;}
+.pg_right .pg_right_link{ width: 100%; height: 50px; line-height: 50px; border-bottom: solid 1px #ccc; text-align: right; color: #999;}
+
+.paging{ width: 100%; height:55px; line-height: 55px; text-align: center; }
+.paging a{ padding: 5px 8px; border: solid 1px #ccc; border-radius: 5px; margin: 0 2px;}
+.paging span{ padding: 5px 8px; border: solid 1px #eee; border-radius: 5px; background: #eee; margin: 0 2px;}
+
+/* 公司简介 */
+.about_box{ width: 888px; height: auto; padding: 15px 0;}
+.about_box h1{ display: block; width: 100%; height: 50px; line-height: 50px; text-align: center; font-size: 20px; color: #cf001e; }
+.about_box .about_txt{ width: 100%; height: auto; line-height: 28px; }
+.about_box .about_txt img{ float: left; margin: 15px 15px 10px 0; }
+
+/* 产品中心 */
+.product_box{ width: 888px; height: auto; overflow: hidden; padding: 10px 0;}
+.product_box ul li{ width: 166px; height: 203px; border: solid 1px #ccc; float: left; margin:0 4.5px 9px 4.5px;}
+.product_box ul li .product_img{ width: 166px; height: 166px; border-bottom: solid 1px #ccc; }
+.product_box ul li .product_img img{ width: 166px; height: 166px; }
+.product_box ul li span{ display: block; width: 166px; height: 37px; line-height: 37px; text-align: center; }
+
+.product_box dl{ display: block; width: 888px; height: 254px; overflow: hidden;}
+.product_box dl dt{ display: block; width: 250px; height: 250px; float: left; border: solid 2px #ccc; }
+.product_box dl dt img{ width: 250px; height: 250px; }
+.product_box dl dd{ display: block; width: 608px; height: 250px; float: left; margin-left: 20px; }
+.product_box dl dd h1{ display: block; width: 100%; height: 40px; line-height: 40px; color: #cf001e; font-size: 20px; }
+.product_box dl dd span{ display: block; width: 100%; height: 29px; line-height: 29px; }
+.product_box dl dd .td_tit{ font-weight: bold; font-size: 14px; color: #cf001e; }
+.product_box dl dd .td_text{ width: 100%; height: 194px; overflow: hidden; line-height: 24px; }
+
+.product_txt{ width: 888px; height: auto; min-height: 140px; padding-top: 15px; line-height: 27px;}
+.product_txt .product_tit{ display: block; width: 100%; height: 35px; line-height: 35px; font-size: 15px; color: #333;}
+.product_txt img{ display: block; max-width: 100%; margin: 0 auto; }
+
+/* 合作伙伴 */
+.concur_box{ width: 888px; height: auto; overflow: hidden; padding: 10px 0; }
+
+/* 新闻中心 */
+.news_box{ width: 888px; height: auto; overflow: hidden; padding: 10px 0;  }
+.news_box ul li{ display: block; width: 888px; height: 47px; border-bottom: dotted 1px #ccc; }
+.news_box ul li a{ display: block; width: 380px; height: 47px; float: left; text-overflow:ellipsis; 
+white-space:nowrap; 
+*white-space:nowrap; 
+overflow:hidden; line-height: 47px; padding-left:10px;}
+.news_box ul li span{ display: block; width: 110px; height: 47px; line-height: 47px; text-align: center; float: right; }
+.news_box h1{ display: block; width: 100%; height: 35px; line-height: 35px; font-size: 18px; color: #cf001e; text-align: center;text-overflow:ellipsis; 
+white-space:nowrap; 
+*white-space:nowrap; 
+overflow:hidden; line-height: 47px; }
+.news_box span{ display: block; width: 100%; height: 35px; line-height: 35px; text-align: center; color: #999; }
+.news_box .news_txt{ width: 100%; height: auto; padding: 15px 0; }
+.news_box .news_txt img{ display: block; margin: 0 auto; max-width: 100%; }
+
+/* 联系我们 */
+.cont_box{ width: 888px; height: auto; padding: 15px 0;}
+.cont_box h1{ display: block; width: 100%; height: 52px; line-height: 52px; font-size: 16px; }
+.cont_box span{ display: block; width: 100%; height: 31px; line-height: 31px; }
+
+.concur_box dl{ display: block; width: 400px; height: auto; margin: 10px auto; overflow: hidden;}
+.concur_box dl dt{ display: block; width: 100px; float: left; line-height: 30px; height: 30px; }
+.concur_box dl dd{ display: block; width: 300px; height: auto; float: left; }
+.concur_box dl dd input{ display: block; width: 280px; height: 30px; border-radius: 5px; overflow: hidden; border: solid 1px #ccc; text-indent: 2em; }
+.concur_box dl dd textarea{ display: block; width: 280px; height: 130px; border-radius: 5px; overflow: hidden; border: solid 1px #ccc; text-indent: 2em; padding: 10px 0;}

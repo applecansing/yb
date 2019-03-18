@@ -1,0 +1,31 @@
+{include file="common/header"/}
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="__COMMON__images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="__COMMON__images/linkiconhome.gif" alt="" class="center">网站首页<img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>机构智慧</span><img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>培训</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>机构智慧<br><span>wisdom</span></div>
+		</div>
+		<ul>
+			<li><a href="{:url('index/Index/wisdom')}">文章</a></li>
+			<li><a href="{:url('index/Index/forum')}" class="nav">培训</a></li>
+			<li><a href="{:url('index/Index/video')}">视频</a></li>
+			<li><a href="{:url('index/Index/books')}">书籍</a></li>
+			<li><a href="{:url('index/Index/period')}">刊期</a></li>
+		</ul>
+	</div>
+	<div class="about-title-en">{$row.title}</div>
+	<div class="about-title">{$row.time}</div>
+	<div class="news-txt">
+		{$row.content}
+	</div>
+</div>
+{include file="common/footer"/}

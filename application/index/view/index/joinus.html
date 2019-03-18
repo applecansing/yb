@@ -1,0 +1,29 @@
+{include file="common/header"/}
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="__COMMON__images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="__COMMON__images/linkiconhome.gif" alt="" class="center">网站首页<img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>机构介绍</span><img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>加入机构</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>机构介绍<br><span>introduce</span></div>
+		</div>
+		<ul>
+			<li><a href="{:url('index/Index/about')}">机构介绍</a></li>
+			<li><a href="{:url('index/Index/team')}">核心团队</a></li>
+			<li><a href="{:url('index/Index/joinus')}" class="nav">加入机构</a></li>
+			<li><a href="{:url('index/Index/contact')}">联系我们</a></li>
+		</ul>
+	</div>
+	<div class="about-txt">
+		{$jigou.content}
+	</div>
+</div>
+<!-- 底部 -->
+{include file="common/footer"/}

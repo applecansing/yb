@@ -1,0 +1,16 @@
+{include file="layout:index"/}
+<block name="main">
+<div class="page-container">
+    <div class="portfolio-content">
+        <ul class="cl portfolio-area">
+            {volist name="data.img" id="v"}
+            <li class="item">
+                <div class="portfoliobox">
+                      <div class="picbox"><img src="{$v}"></a></div>
+                </div>
+            </li>
+            {/volist}
+        </ul>
+    </div>
+</div>
+</block>

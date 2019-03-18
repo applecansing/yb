@@ -1,0 +1,178 @@
+{include file="common/header1" /}
+<!-- 广告 -->
+<div class="banner-box">
+	<div class="fontstxt1"><img src="__COMMON__images/fontstxt1.png" alt=""></div>
+	<div class="fontstxt2"><img src="__COMMON__images/fontstxt2.jpg" alt=""></div>
+	<div class="fontstxt3"><img src="__COMMON__images/fontstxt3.png" alt=""></div>
+	<div class="layui-carousel" id="indexban">
+	   <div carousel-item>
+	     {volist name="banner" id="val"}
+	      <div><img src="{$val.img}" alt="" class="bannerimg"></div>
+	      {/volist}
+	   </div>
+	</div>
+</div>
+<!-- 手机广告 -->
+<div class="carousel-box">
+	<div class="block_home_slider">
+  		<div id="home_slider" class="flexslider">
+  			<ul class="slides">
+		      {volist name="banner" id="val"}
+		      <li>
+		        <div class="slide">
+		        	<a href="#">
+		        		<img src="{$val.img}" alt="" />
+		        	</a>
+		        </div>
+		      </li>
+		        {/volist}
+		    </ul>
+  		</div>
+  		<script type="text/javascript">
+		  $(function () {
+			  $('#home_slider').flexslider({
+			    animation : 'slide',
+			    controlNav : true,
+			    directionNav : true,
+			    animationLoop : true,
+			    slideshow : false,
+			    useCSS : false
+			  });									
+		  });
+		</script>
+  	</div>
+</div>
+<!-- 内容 -->
+<div class="first-box">
+	<div class="first-lft">
+		<div class="index-tit">培训论坛<span>Training Forum</span><a href="{:url('index/Index/forum')}">+更多</a></div>
+		<div class="first-forum">
+			<div class="layui-carousel" id="forum">
+			   <div carousel-item>
+			   {volist name="peixun" id="va"}
+			   <div><a href="{:url('index/Index/forumdata',array('id'=>$va.id))}"><img src="{$val.img}" class="foumimg" alt=""><span class="foumtit">{$va.title}</span></a></div>
+			   
+			      {/volist}
+			   </div>
+			</div>
+		</div>
+		<div class="index-tit">视频展示<span>Video display</span><a href="video.html">+更多</a></div>
+		<div class="first-video">
+			<a href="javascript:void(0)" onclick="Show_Hidden(back1)">
+				<img src="{$video.img}" alt="">
+			</a>
+		</div>
+		<div class="video" id="back1">
+			<video class="video_video" src="{$video.video}" controls="controls"></video>
+			<div class="video_xx"><a href="javascript:void(0)" onclick="Show_Hidden(back1)"></a></div>
+		</div>
+	</div>
+
+	<div class="first-cen">
+		<div class="index-tit">机构智慧<span>Institutional wisdom</span><a href="{:url('index/Index/wisdom')}">+更多</a></div>
+		<div class="wisdow-list">
+			<ul>
+				
+				
+				{volist name="wenzhang" id="vo"}
+				<li><a href="{:url('index/Index/wisdomdata',array('id'=>$vo.id))}">{$vo.title}</a><span>{$vo.time}</span></li>
+				{/volist}
+			</ul>
+		</div>
+
+
+		<div class="wisdow-white"></div>
+		<div class="index-tit">业绩展示<span>Performance display</span><a href="product.html">+更多</a></div>
+		<div class="wisdow-list">
+			<ul>
+				
+				{volist name="product" id="vv"}
+				<li><a href="{:url('index/Index/productdata',array('id'=>$vo.id))}">{$vv.title}</a><span>{$vv.time}</span></li>
+				{/volist}
+			</ul>
+		</div>
+	</div>
+	<div class="first-rht">
+		<div class="index-tit">专业服务<span>Professional services</span><a href="{:url('index/Index/server')}">+更多</a></div>
+		<div>
+			<dl>
+				<a href="{:url('index/Index/server')}">
+					<dt><img src="__COMMON__images/serviceimg1.jpg" alt=""></dt>
+					<dd>
+						<span>PPP全生命周期</span>
+						<p>协君有多位在政府部门、大型政府平台公司工作的专家，经验丰富...</p>
+					</dd>
+				</a>
+			</dl>
+			<dl>
+				<a href="{:url('index/Index/gongcheng')}">
+					<dt><img src="__COMMON__images/serviceimg2.jpg" alt=""></dt>
+					<dd>
+						<span>工程全过程咨询</span>
+						<p>协君有多位在政府部门、大型政府平台公司工作的专家，经验丰富，有多年的实践经验...</p>
+					</dd>
+				</a>
+			</dl>
+		</div>
+	</div>
+</div>
+<div class="first-two-ban">
+	<a href="#"><img src="__COMMON__images/firsttwobanimg.jpg" alt=""></a>
+</div>
+<div class="first-box">
+	<div class="first-lft">
+		<div class="index-tit">书籍展示<span>Book display</span><a href="{:url('index/Index/books')}">+更多</a></div>
+		<div class="book-list">
+			{volist name="shuji" id="vca"}
+			<dl>
+				<a href="{:url('index/Index/booksdata',array('id'=>$vca.id))}">
+					<dt><img src="{$vca.img}" alt=""></dt>
+					<dd>
+						<span>{$vca.title}</span>
+						<em>作者：{$vca.name}</em>
+						<p>{$vca.zhaiyao}</p>
+					</dd>
+				</a>
+			</dl>
+			{/volist}
+		</div>
+		<div class="boox-white"></div>
+		<div class="index-tit">期刊展示<span>Periodical display</span><a href="{:url('index/Index/period')}">+更多</a></div>
+		<div class="book-list">
+			{volist name="zhoukan" id="vvv"}
+			<dl>
+				<a href="{:url('index/Index/perioddata',array('id'=>$vvv.id))}">
+					<dt><img src="{$vvv.img}" alt=""></dt>
+					<dd>
+						<span>{$vvv.title}</span>
+						<em>{$vvv.qishu}</em>
+						<p>{$vvv.zhaiyao}</p>
+					</dd>
+				</a>
+			</dl>
+			{/volist}
+		</div>
+	</div>
+	<div class="first-cen">
+		<div class="index-tit">行业动态<span>Institutional wisdom</span><a href="{:url('index/Index/news')}">+更多</a></div>
+		<div class="wisdow-list">
+			<ul>
+				{volist name="news" id="voa"}
+			<li><a href="{:url('index/Index/newsdata',array('id'=>$voa.id))}">{$voa.title}</a><span>{$voa.time}</span></li>
+			   {/volist}	
+			</ul>
+		</div>
+	</div>
+	<div class="first-rht">
+		<div class="index-tit">法律法规<span>Laws and regulations</span><a href="{:url('index/Index/newss')}">+更多</a></div>
+		<div class="wisdow-list">
+			<ul>
+				{volist name="newsfa" id="vall"}
+			<li><a href="{:url('index/Index/newssdata',array('id'=>$vall.id))}">{$voa.title}</a><span>{$vall.title}</span></li>
+				{/volist}
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 底部 -->
+{include file="common/footer" /}

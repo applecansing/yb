@@ -1,0 +1,109 @@
+@charset='utf-8';
+body,html{ padding:0; margin:0; font-size:1em; color:#666; font-family: "微软雅黑","Microsoft Yahei","Hiragino Sans GB","SimHei","STHeiti" !important;}
+ul,li,p,h1,h2,h3,dl,dt,dd,input{ padding:0; margin:0; list-style:none;}
+a{ text-decoration:none; color:#666;}
+a:hover{ color: #e72c24 !important; text-decoration: none; }
+.demo{ -webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
+.clear{ clear:both;}
+img{ vertical-align:top !important; border:none;}
+input{ font-family: "微软雅黑","Microsoft Yahei","Hiragino Sans GB","SimHei","STHeiti" !important;}
+input:focus{ outline: none;}
+textarea:focus{ outline: none; }
+.center{position: relative; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
+.noscroll{
+	overflow: hidden;
+}
+.noscroll body {
+    overflow: hidden;
+}
+.noscroll body {
+    position: fixed; top: 0; left: 0;
+}
+
+/* 隐藏 */
+.pc-head-box{ display: none; }
+.banner-box{ display: none; }
+.first-two-ban{ display: none;}
+
+/* 头部 */
+.ph-head-box{ width: 100%; height: 4em; box-sizing: border-box; padding: 0 5%; background: #fff; z-index: 8; box-shadow: 0 1px 2px rgba(0,0,0,0.1); position: fixed; top: 0; left: 0;}
+.ph-head-box .logo{ width: 100%; height: 4em; padding-top: 0.5em; box-sizing: border-box;}
+.ph-head-box .logo img{ height: 3em;}
+
+.phoneicon{ width: 2.75em; height: 1.875em; position: fixed; top: 1.125em; right: 5%; z-index: 9; animation: phoneicon 1s linear 0s alternate forwards; opacity: 0;}
+.phoneicon img{ height: 1.875em; float: right; display: block;}
+.phoneicon_h{ width: 20%; height: 100%; position: fixed; top: 0; right: 0; z-index: 9; background: rgba(0,0,0,0.5);}
+.phoneicon_h img.phicon1{ display: none; }
+
+.ph-head-box #topBody{ display: none; }
+.ph-head-box .menu{ width: 80%; height: 100%; position: fixed; left: 0; top: 0; background: #fff; z-index: 999; display: none;box-shadow: 5px 0px 5px rgba(0,0,0,0.1)}
+.ph-head-box .menu1>.layui-tab{ display: none; }
+
+.ph-head-box .layui-tab{ width: 100% !important; height: 100% !important; margin: 0 !important;}
+.ph-head-box .layui-this:after{ border: none !important; color: #104c89 !important;}
+.ph-head-box .layui-tab .layui-tab-title{ width: 100% !important; height: 100% !important; display: block !important;}
+.ph-head-box .layui-tab { width: 100% !important; height: 100% !important; margin: 0 !important;}
+.ph-head-box .layui-tab .layui-tab-title{ width: 100% !important; height: 100% !important; position: relative; z-index: 99999;}
+.ph-head-box .layui-tab .layui-tab-title li{display: block !important; width: 90%; height: 16%; display:table !important; text-indent: 3em; border-bottom: solid 1px #eee; margin-left: 5%; padding: 0 !important; line-height: normal !important; text-align: left !important; color: #444; opacity: 0;}
+.ph-head-box .layui-tab .layui-tab-title li a{ width: 100%; height: 100%; vertical-align:middle; display:table-cell !important; position: relative; }
+.ph-head-box .layui-tab .layui-tab-title li span{ width: 100%; height: 100%; vertical-align:middle; display:table-cell !important; position: relative; }
+
+.submenu{ width: 80%; height: 100%; position: fixed; top: 0; left: 0; z-index:999999; background: #1550a2; overflow-y: auto; box-sizing: border-box; padding-top: 2.5em;}
+.submenu li{ display: block !important; width: 90%; height: 4em; display:table !important; text-indent: 3em; border-bottom: solid 1px rgba(255,255,255,0.2); margin: 0 auto; padding: 0 !important; line-height: normal !important; text-align: left !important; color: #444; opacity: 0;}
+.submenu li a{ width: 100%; height: 100%; vertical-align:middle; display:table-cell !important; position: relative; color: #fff; }
+.submenu li a:hover{ color: #fff !important; }
+.layui-btn{ padding: 0 !important; border-radius: 0 !important; width: 65% !important; background: url(../images/navblankicon.png) no-repeat left center #1550a2 !important; position: fixed; top: 0; height: 2.5em; left: 5%; z-index: 9999999; opacity: 0;}
+
+.head-box-white{ width: 100%; height: 4em; }
+
+.layui-show .submenu li{animation: submenu 0.5s linear 0s alternate forwards;}
+.layui-show .layui-btn{animation: layui 0.5s linear 0s alternate forwards;}
+
+.ph-head-box .menu>.layui-tab .layui-tab-title li:first-child{animation: submenu 0.5s linear 0s alternate forwards;} 
+.ph-head-box .menu>.layui-tab .layui-tab-title li:nth-child(2){animation: submenu 0.5s linear 0.2s alternate forwards;}
+.ph-head-box .menu>.layui-tab .layui-tab-title li:nth-child(3){animation: submenu 0.5s linear 0.4s alternate forwards;}
+.ph-head-box .menu>.layui-tab .layui-tab-title li:nth-child(4){animation: submenu 0.5s linear 0.6s alternate forwards;}
+.ph-head-box .menu>.layui-tab .layui-tab-title li:nth-child(5){animation: submenu 0.5s linear 0.8s alternate forwards;}
+.ph-head-box .menu>.layui-tab .layui-tab-title li:nth-child(6){animation: submenu 0.5s linear 0.6s alternate forwards;}
+
+/* 底部 */
+.bottom{ width: 100%; height: auto; background: #222; color: #fff!important; box-sizing: border-box; padding: 1.25em;}
+.bottom .bottom-box .bottom-left>a{ display: none; }
+.bottom .bottom-box .bottom-right{ display: none; }
+
+/* Css动画 */
+@-webkit-keyframes submenu{
+	0%{ opacity: 0; margin-left: 0; }
+	to{ opacity: 1; margin-left: 5%; }
+}
+@keyframes submenu{
+	0%{ opacity: 0; margin-left: 0; }
+	to{ opacity: 1; margin-left: 5%; }
+}
+
+@-webkit-keyframes layui{
+	0%{ opacity: 0; left: 10%; }
+	to{ opacity: 1; left: 5%; }
+}
+@keyframes layui{
+	0%{ opacity: 0; left: 10%; }
+	to{ opacity: 1; left: 5%; }
+}
+
+@-webkit-keyframes phoneicon{
+	0%{ opacity: 0; top: 1.125em; right: 0; }
+	to{ opacity: 1; top: 1.125em; right: 5%;}
+}
+@keyframes phoneicon{
+	0%{ opacity: 0; top: 1.125em; right: 0; }
+	to{ opacity: 1; top: 1.125em; right: 5%;}
+}
+
+@-webkit-keyframes carousel{
+	0%{ opacity: 0; }
+	to{ opacity: 1; }
+}
+@keyframes carousel{
+	0%{ opacity: 0; }
+	to{ opacity: 1; }
+}

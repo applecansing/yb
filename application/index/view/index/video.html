@@ -1,0 +1,46 @@
+{include file="common/header"/}
+<script type="text/javascript" src="__COMMON__js/video.js"></script>
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="__COMMON__images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="__COMMON__images/linkiconhome.gif" alt="" class="center">网站首页<img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>机构智慧</span><img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>视频</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>机构智慧<br><span>wisdom</span></div>
+		</div>
+		<ul>
+			<li><a href="{:url('index/Index/wisdom')}">文章</a></li>
+			<li><a href="{:url('index/Index/forum')}">培训</a></li>
+			<li><a href="{:url('index/Index/video')}" class="nav">视频</a></li>
+			<li><a href="{:url('index/Index/books')}">书籍</a></li>
+			<li><a href="{:url('index/Index/period')}">刊期</a></li>
+		</ul>
+	</div>
+	<div class="video-list">
+		<ul>
+		{volist name="listuo" id="val"}
+			<li>
+				<a href="javascript:void(0)" onclick="Show_Hidden(back1)">
+					<img src="{$val.img}" alt="">
+					<span>{$val.title}</span>
+				</a>
+			</li>
+		{/volist}	
+		</ul>
+	</div>
+	<div class="video" id="back1">
+		<video class="video_video" src="{$val.video}" controls="controls"></video>
+		<div class="video_xx"><a href="javascript:void(0)" onclick="Show_Hidden(back1)"></a></div>
+	</div>
+	{$page}
+	<!-- <ul class="pagination"><li class="disabled"><span>&laquo;</span></li> <li class="active"><span>1</span></li><li><a href="/news.html?page=2">2</a></li><li><a href="/news.html?page=3">3</a></li><li><a href="/news.html?page=4">4</a></li><li><a href="/news.html?page=5">5</a></li><li><a href="/news.html?page=6">6</a></li><li><a href="/news.html?page=7">7</a></li><li><a href="/news.html?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="/news.html?page=12">12</a></li><li><a href="/news.html?page=13">13</a></li> <li><a href="/news.html?page=2">&raquo;</a></li></ul> -->
+</div>
+<!-- 底部 -->
+{include file="common/footer"/}

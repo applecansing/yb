@@ -1,0 +1,97 @@
+@charset='utf-8';
+.pg-ban{ width: 100%; height: auto; overflow: hidden; }
+.pg-ban img{ width: 100%; }
+
+.link-box{ width: 100%; height: 3em; line-height: 3em; background: #f8f8f8; }
+.link-box .link{ width: 90%; height: 3em; margin: 0 auto; text-overflow:ellipsis; white-space:nowrap; *white-space:nowrap; overflow:hidden;}
+.link-box .link img{ margin: 0 6px; }
+.link-box .link span{ color: #666; }
+
+.page-submenu{ display: none; }
+
+.page-box{ width: 90%; height: auto; margin: 0 auto; min-height: 300px; position: relative;}
+
+.about-txt{ width: 100%; height: auto; box-sizing: border-box; padding-top: 2.5em; line-height: 2em; padding-bottom: 3.75em; }
+.about-txt img{ max-width: 100%; display: block; margin: 10px 0;}
+
+.pagination{ width:100%; height: 30px; display: block; text-align: center; overflow: hidden;clear:both; padding-bottom: 60px;}
+.pagination li{ width: 30px; height: 30px; background: #f5f5f5; display: inline-block; margin-right: 2px; text-align: center; line-height: 30px;}
+.pagination li.active{ background:#1863bc; color: #fff;  }
+.pagination li:hover{ background: #1863bc; }
+.pagination li:hover a{ color: #fff; display: block; width: 100%; height: 30px; }
+.pagination li:hover a:hover{ color: #fff !important; }
+
+.page-box .team-list{ width: 100%; height: auto; margin: 0 auto; padding-top: 1.5em; }
+.page-box .team-list dl{ display: block; width: 50%; height: auto; float: left; -webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease; cursor: pointer;}
+.page-box .team-list dl dt{ width: 100%; height: auto; overflow: hidden; }
+.page-box .team-list dl dt img{ width: 100%; height: auto; -webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease; display: block;}
+.page-box .team-list dl:hover dt img{-webkit-transform:scale(1.1);-moz-transform:scale(1.1);-o-transform:scale(1.1);transform:scale(1.1);-ms-transform:scale(1.1);}
+.page-box .team-list dl dd{ display: block; width: 100%; height: auto; box-sizing: border-box; padding: 1em; background: #fff; text-align: center;}
+.page-box .team-list dl dd .team-tit{ width: 100%; height: auto; color: #333; font-size: 1.05em; text-transform: uppercase;}
+.page-box .team-list dl dd .team-tui{ width: 100%; height: auto; padding-top: 5px; color: #777; font-size: 0.75em; }
+.page-box .team-list dl dd .team-jiao{ width: 100%; height: 11px; padding: 7px 0; }
+.page-box .team-list dl dd .team-jiao img{ margin: 0 1px; -webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
+.page-box .team-list dl dd .team-txt{ width: 100%; height: 2.6em; line-height: 1.3em; overflow: hidden; font-size: 0.80em; color: #666; padding-top: 7px; }
+.page-box .team-list dl:first-child{ margin-left: 0; }
+.page-box .team-list dl:hover dd .team-jiao img{ transform:rotateY(180deg);-ms-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-webkit-transform:rotateY(180deg);-o-transform:rotateY(180deg);}
+.page-box .team-list dl:hover{ box-shadow: 0 3px 5px rgba(0,0,0,0.3) }
+
+.team-text{ display: block; width: 100%; height: auto; overflow: hidden; line-height: 2em; box-sizing: border-box;  padding-top: 2.5em; padding-bottom: 3.75em;}
+.team-text>dt{ display: block; width: 100%; height: auto;  }
+.team-text>dt img{ width: 100% }
+.team-text>dd{ display: block; width: 100%; height: auto; float: left; box-sizing: border-box; }
+.team-text>dd .team-itt{ width: 100%; height: 2.5em; line-height: 2.5em; font-size: 1.25em; color: #333; }
+
+.contact-txt{ width: 100%; height: auto; line-height: 30px; overflow: hidden; }
+.contact-tit{ width: 100%; height: auto; padding:40px 0 20px 0; font-size: 1.25em; color: #333; }
+.contact-tit span{ font-size: 1em; }
+.contact-list{ width: 100%; height: auto; color: #333; display: block;}
+.contact-list li{ width: 100%; height: auto; padding: 7px 0; }
+.contact-code{ width: 100%; height: auto; overflow: hidden; }
+.contact-code li{ display: block; width: 32%; height: auto; line-height: 32px; float: left; text-align: center; margin-right: 1%; }
+.contact-code li img{ width: 100%; }
+.map{ width: 100%; height: 330px; display: none; }
+
+.contactnav{ margin-top: 15px; display: block; width: 128px; height: 34px; margin-bottom: 40px; }
+
+.news-list{ width: 100%; height: auto; overflow: hidden;}
+.news-list dl{ display: block; width: 100%; height: auto; margin-bottom: 20px; border-bottom: solid 1px #eee; overflow: hidden; padding-bottom: 15px;}
+.news-list dl dt{ display: block; width: 240px; height: 170px; float: left; display: none;}
+.news-list dl dt img{ width: 240px; height: 170px; }
+.news-list dl dd{ display: block; width: 100%; float: left;}
+.news-list dl dd a span{ display: block; width: 100%; height: auto; padding-top:20px; color: #999;}
+.news-list dl dd a h1{ display: block; width: 100%; height: auto; font-size: 1.25em; padding: 7px 0 15px 0; }
+.news-list dl dd a p{ display: block; width: 90%; height: auto; line-height: 24px; }
+
+.news-txt{ width: 100%; height: auto; line-height: 30px; overflow: hidden; line-height: 2em;}
+.news-txt img{ max-width: 100%; }
+
+.about-title-en{ width: 100%; height: auto; font-size: 1.35em; color: #333; text-transform: uppercase; padding: 15px 0 5px 0; }
+.about-title{ width: 100%; height: auto; padding: 7px 0; font-size: #333; font-size: 1.15em; }
+
+.pg-wisdom-list{ width: 100%; height: auto; overflow: hidden;}
+.pg-wisdom-list dl{ display: block; width: 100%; height: auto; margin-bottom: 20px; border-bottom: solid 1px #eee; overflow: hidden; padding-bottom: 15px;}
+.pg-wisdom-list dl dt{ display: block; width: 240px; height: 170px; float: left; display: none;}
+.pg-wisdom-list dl dt img{ width: 240px; height: 170px; }
+.pg-wisdom-list dl dd{ display: block; width: 100%; float: left;}
+.pg-wisdom-list dl dd a span{ display: block; width: 100%; height: auto; padding-top:20px; color: #999;}
+.pg-wisdom-list dl dd a h1{ display: block; width: 100%; height: auto; font-size: 1.25em; padding: 7px 0 15px 0; }
+.pg-wisdom-list dl dd a p{ display: block; width: 90%; height: auto; line-height: 24px; }
+
+.video-list ul li{ width: 50%; height: auto; float: left; }
+.video-list ul li img{ width: 100%; }
+.video-list ul li span{ display: block; width: 100%; height: 3em; line-height: 3em; text-align: center; }
+
+.video{ background:rgba(0,0,0,0.85); width:100%; height:100%; position:fixed; top:0; left:0; z-index: 99; display: none;}
+.video_video{max-height: 80%; max-width: 80%;position:fixed; z-index:999; top:50%; left:50%; display: inline-block; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.video_xx{width: 100%; height:100%;position:fixed; z-index:998; left: 0; top: 0;}
+.video_xx a{ display: block; width: 100%; height: 100%;}
+
+.books-list{ width: 100%; height: auto; overflow: hidden;}
+.books-list dl{ display: block; width: 100%; height: auto; margin-bottom: 20px; border-bottom: solid 1px #eee; overflow: hidden; padding-bottom: 15px;}
+.books-list dl dt{ display: block; width: 240px; height: 170px; float: left; display: none;}
+.books-list dl dt img{ width: 240px; height: 170px; }
+.books-list dl dd{ display: block; width: 100%; float: left;}
+.books-list dl dd a span{ display: block; width: 100%; height: auto; padding-top:20px; color: #999;}
+.books-list dl dd a h1{ display: block; width: 100%; height: auto; font-size: 1.25em; padding: 7px 0 15px 0; }
+.books-list dl dd a p{ display: block; width: 90%; height: auto; line-height: 24px; }

@@ -1,0 +1,106 @@
+{include file="common/header" /}
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="__COMMON__images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="__COMMON__images/linkiconhome.gif" alt="" class="center">网站首页<img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>机构介绍</span><img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>联系我们</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>机构介绍<br><span>introduce</span></div>
+		</div>
+		<ul>
+			<li><a href="{:url('index/Index/about')}">机构介绍</a></li>
+			<li><a href="{:url('index/Index/team')}">核心团队</a></li>
+			<li><a href="{:url('index/Index/joinus')}">加入机构</a></li>
+			<li><a href="{:url('index/Index/contact')}" class="nav">联系我们</a></li>
+		</ul>
+	</div>
+	<div class="contact-txt">
+		<div class="contact-tit">上海协君投资咨询有限公司</div>
+		<ul class="contact-list">
+			<li>咨询电话：{$contact.ipone}</li>
+			<li>联系人：{$contact.name}</li>
+			<li>联系邮箱：{$contact.email}</li>
+			<li>总部地址：{$contact.address}</li>
+		</ul>
+		<div class="contact-tit">关注我们<span>(扫一扫)</span></div>
+		<ul class="contact-code">
+			<li><img src="{$ppp.img}" alt="">PPP运作实务</li>
+			<li><img src="{$rong.img}" alt=""><br>融尔学院</li>
+			<li><img src="{$zhou.img}" alt=""><br>周月萍律师</li>
+		</ul>
+		<div class="contact-tit">我们的位置</div>
+		<div class="map" id="allmap"></div>
+		<a href='http://api.map.baidu.com/geocoder?address=上海市浦东新区陆家嘴金融贸易区&output=html' target='_blank' class="contactnav"><img src="__COMMON__images/contactnavicon.jpg" alt="">
+	    </a>
+	</div>
+</div>
+<!-- 底部 -->
+{include file="common/footer" /}
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map('allmap');
+    var poi = new BMap.Point(121.550914,31.20914);
+    map.centerAndZoom(poi, 17);
+    map.enableScrollWheelZoom();
+
+    var content = '<div style="margin:0;line-height:25px;padding:2px;">' +
+                    '' +
+                    '上海市浦东新区陆家嘴金融贸易区<br/>咨询电话：021-60613577<br/>联系人：周国平/15800366139 ' +
+                  '</div>';
+
+    //创建检索信息窗口对象
+    searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title  : "上海协君投资咨询有限公司",      //标题
+            width  : 290,             //宽度
+            height : 105,              //高度
+            panel  : "panel",         //检索结果面板
+            enableAutoPan : true,     //自动平移
+            searchTypes   :[
+                BMAPLIB_TAB_SEARCH,   //周边检索
+                BMAPLIB_TAB_TO_HERE,  //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+    var marker = new BMap.Marker(poi); //创建marker对象
+    marker.enableDragging(); //marker可拖拽
+    marker.addEventListener("click", function(e){
+        searchInfoWindow.open(marker);
+    })
+    map.addOverlay(marker); //在地图中添加marker
+    function openInfoWindow3() {
+        searchInfoWindow3.open(new BMap.Point(121.550914,31.20914));
+    }
+    //map.setMapStyle({style:'dark'});
+</script>
+<script>
+	layui.use('element', function(){
+	  var $ = layui.jquery
+	  ,element = layui.element;
+	  //触发事件
+	  var active = {
+	    tabChange: function(){
+	      //切换到指定Tab项
+	      element.tabChange('nav', '1'); //切换到：用户管理
+	    }
+	  };
+	  
+	  $('.site-demo-active').on('click', function(){
+	    var othis = $(this), type = othis.data('type');
+	    active[type] ? active[type].call(this, othis) : '';
+	  });
+	  //Hash地址的定位
+	  var layid = location.hash.replace(/^#nav=/, '');
+	  element.tabChange('nav', layid);
+	  
+	  element.on('tab(nav)', function(elem){
+	    location.hash = 'nav='+ $(this).attr('lay-id');
+	  });
+	});
+</script>

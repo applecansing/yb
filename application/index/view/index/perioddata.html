@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<title>上海协君投资咨询有限公司</title>
+    <meta content="上海协君投资咨询有限公司" name="description"/>
+    <meta content="上海协君投资咨询有限公司" name="keywords"/>
+	<meta name="author" content="攸攸网络-个性定制官网：www.yovyov.com">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 1170px)" href="css/body.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 1170px)" href="css/page.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1170px)" href="css/phbody.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1170px)" href="css/phpage.css">
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	<link rel="bookmark" href="images/favicon.ico"/>
+	<!-- Layui组件 -->
+	<link rel="stylesheet" href="../layui/css/layui.css">
+	<script src="../layui/layui.js" type="text/javascript"></script>
+	<!-- 移动端菜单 -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<!-- 广告 -->
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script> 
+	$(document).ready(function(){
+	  $("#topBtn").click(function(){
+	    $("#topBody").fadeToggle();
+	    var val=$("#topBtn").attr("class");
+	    if(val == 'phoneicon'){
+	    	$("#topBtn").removeClass().addClass('phoneicon_h');
+	    	$('html').addClass('noscroll');
+	    	$("#topBody").removeClass().addClass('menu');
+	    }else{
+	    	$("#topBtn").removeClass().addClass('phoneicon');
+	    	$('html').removeClass('noscroll');
+	    	$("#topBody").removeClass().addClass('menu1');
+	    }
+	  });
+	});
+	</script>
+</head>
+<body>
+<!-- 头部 -->
+<div class="pc-head-box">
+	<div class="pc-head-cent">
+		<div class="logo"><img src="images/logo.png" alt=""></div>
+		<div class="menu">
+			<div class="link">
+				<div class="code">
+					<img src="images/codeicon.png" alt="">
+					<div class="code-list-icon"><img src="images/codelisticon.png" alt=""></div>
+					<div class="code-list">
+						<ul>
+							<li><img src="images/codeimg.jpg" alt="">微信公众号</li>
+							<li><img src="images/codeimg.jpg" alt="">微信客服</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tel">
+					<img src="images/telicon.png" alt="">021-60613577
+				</div>
+				<div class="serch">
+					<form action="" class="layui-form">
+						<input type="text" placeholder="输入关键字搜索" lay-verify="title" autocomplete="off" >
+						<button lay-submit=""></button>
+					</form>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><span><a href="index.html">网站首页</a></span></li>
+					<li><span><a href="about.html">机构介绍</a></span></li>
+					<li><span><a href="product.html">业绩展示</a></span></li>
+					<li><span><a href="server.html">专业服务</a></span></li>
+					<li><span><a href="wisdom.html" class="nav">机构智慧</a></span></li>
+					<li><span><a href="team.html">核心团队</a></span></li>
+					<li><span><a href="joinus.html">加入机构</a></span></li>
+					<li><span><a href="news.html">行业动态</a></span></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<!-- 手机头部 -->
+<div class="ph-head-box">
+	<div class="logo"><img src="images/logo.png" alt=""></div>
+	<div class="phoneicon" id="topBtn">
+		<img src="images/phoneicon.png" class="center phicon1" alt="">
+	</div>
+	<div id="topBody">
+		<div class="layui-tab" lay-filter="nav">
+			<ul class="layui-tab-title">
+				<li lay-id="1"><a href="index.html">网站首页</a></li>
+				<li lay-id="2"><span>机构介绍</span></li>
+				<li lay-id="3"><span>业绩展示</span></li>
+				<li lay-id="4"><span>专业服务</span></li>
+				<li lay-id="5"><span>机构智慧</span></li>
+				<li lay-id="6"><span>新闻中心</span></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item">
+				</div>
+				<div class="layui-tab-item">
+					<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="about.html#nav=2">公司简介</a></li>
+						<li><a href="team.html#nav=2">核心团队</a></li>
+						<li><a href="joinus.html#nav=2">加入机构</a></li>
+						<li><a href="contact.html#nav=2">联系我们</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+			    	<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="product.html#nav=3">片区开发PPP项目</a></li>
+						<li><a href="product.html#nav=3">交通PPP项目</a></li>
+						<li><a href="product.html#nav=3">市政公用事业PPP项目</a></li>
+						<li><a href="product.html#nav=3">社会类PPP项目</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+					<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="server.html#nav=4">PPP全生命周期</a></li>
+						<li><a href="server.html#nav=4">工程全过程咨询</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+			    	<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="wisdom.html#nav=5">文章</a></li>
+						<li><a href="forum.html#nav=5">培训</a></li>
+						<li><a href="video.html#nav=5">视频</a></li>
+						<li><a href="books.html#nav=5">书籍</a></li>
+						<li><a href="period.html#nav=5">刊期</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+					<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="news.html#nav=6">行业动态</a></li>
+						<li><a href="news.html#nav=6">政策法规</a></li>
+			    	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="head-box-white"></div>
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="images/linkiconhome.gif" alt="" class="center">网站首页<img src="images/linkicondot.gif" alt="" class="center"><span>机构智慧</span><img src="images/linkicondot.gif" alt="" class="center"><span>刊期</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>机构智慧<br><span>wisdom</span></div>
+		</div>
+		<ul>
+			<li><a href="wisdom.html">文章</a></li>
+			<li><a href="forum.html">培训</a></li>
+			<li><a href="video.html">视频</a></li>
+			<li><a href="books.html">书籍</a></li>
+			<li><a href="period.html" class="nav">刊期</a></li>
+		</ul>
+	</div>
+	<div class="about-title-en">读者杂志</div>
+	<div class="about-title">第一期</div>
+	<div class="news-txt">
+		近几年，随着我国社会主义市场经济的发展，公司非诉法律业务公司股权转让行为大量发生，公司法实践出现了许多疑难法律问题。上半年，我们通过调研，收集、归纳和整理了股权转让的主要审判实务问题，并提出解决问题的观点和思路，期望得到法学界和同行们的批评指正。<br><br>
+		在公司实践中，有的股东在未经其他股东过半数同意或未让其他股东行使优先购买权的情况下，即与股东之外的第三人签订股权转让合同，且有的受让人在合同
+		订立后即进入公司行使股权，对此，股权转让合同是否生效，股权转让合同效力与其他股东过半数同意或放弃优先购买权的关系如何，目前争议较大。存在无效
+		说，可撤销说、附生效条件说、效力待定说等不同观点。<br><br>
+		根据合同规定，股权转让合同为合同的一种类型，除法律规定和当事人约定生效条件外，一般情况下自双方协商一致即成立并生效。公司法规定的股东的“同意
+		”条款和优先购买权条款属于限定性规定，不属于绝对的强制性规定，故对股权转让合同效力的影响应作具体分析，公司其他股东同意转让并放弃优先购买权时
+		，股权转让合同当然生效。公司其他股东不同意转让或行使优先购买权时，股权转让合同不能都认定无效。当事人可以合同约定解除合同。股权转让合同效力与
+		股权实际转让相对分离，公司或者其他股东可以通过不予办理股权登记阻碍合同的履行。实践中存在公司登记不健全的情况以及受让人实际控制公司而自行办理
+		登记手续等情形。受让人已经实际进入公司并行使股权的，应该慎重对待，可视为公司及其他股东知道并同意股权转让并放弃优先购买权，公司及其他股东以未
+		经股东同意和要求行使优先购买权而请求法院撤销或确认合同无效的，不予支持。股权转让未经公司登记，也存在有的股东确实不知道受让人实际行使股东权的
+		特殊情形。股权转让须经公司其他股东过半数同意或行使优先购买权系法律规定，不存在转让人和受让人不知道的善意情况。当然，违反公司法规定的程序转让
+		股权，损害了公司的人合性和信赖关系，也损害了其他股东的同意权和优先购买权。因此，未经公司其他股东过半数同意或未让其他股东行使优先购买权而订立
+		的股权转让合同为效力待定合同。
+	</div>
+</div>
+<!-- 底部 -->
+<div class="bottom">
+	<div class="bottom-box">
+		<div class="bottom-left">
+			<a href="about.html">机构介绍</a>
+			<a href="joinus.html">加入机构</a>
+			<a href="contact.html">联系我们</a>
+			<span>上海协君投资咨询有限公司 Copyright © 2018 攸攸网络 - 技术支持</span>
+		</div>
+		<div class="bottom-right">
+			<img src="images/codeiconbot.jpg" alt="">
+			<div class="bottom-codeicon"><img src="images/codeiconbot.png" alt=""></div>
+			<div class="bottom-code">
+				<ul>
+					<li><img src="images/codeimg.jpg" alt="">PPP运作实务</li>
+					<li><img src="images/codeimg1.jpg" alt="">融尔学苑</li>
+					<li><img src="images/codeimg2.jpg" alt="">周月萍律师</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	layui.use('carousel', function(){
+	  var carousel = layui.carousel;
+	  //广告
+	  carousel.render({
+	    elem: '#indexban'
+	    ,width: '100%' 
+	    ,height:'100%'
+	    ,arrow: 'none'
+	    ,indicator:'none'
+	    ,anim:'fade'
+	  });
+	  //论坛
+	  carousel.render({
+	    elem: '#forum'
+	    ,width: '100%' 
+	    ,height:'100%'
+	    ,arrow: 'none'
+	    ,indicator:'inside'
+	    ,anim:'left'
+	  });
+	});
+	//搜索
+	layui.use(['form', 'layedit', 'laydate'], function(){
+	  var form = layui.form
+	  ,layer = layui.layer
+	  ,layedit = layui.layedit
+	  ,laydate = layui.laydate;
+	  form.verify({
+	    title: function(value){
+	      if(value.length < 2){
+	        return '请输入搜索关键词';
+	      }
+	    }
+	  });
+	});
+	//二级菜单
+	layui.use('element', function(){
+	  var $ = layui.jquery
+	  ,element = layui.element;
+	  //触发事件
+	  var active = {
+	    tabChange: function(){
+	      //切换到指定Tab项
+	      element.tabChange('nav', '1'); //切换到：用户管理
+	    }
+	  };
+	  
+	  $('.site-demo-active').on('click', function(){
+	    var othis = $(this), type = othis.data('type');
+	    active[type] ? active[type].call(this, othis) : '';
+	  });
+	  //Hash地址的定位
+	  var layid = location.hash.replace(/^#nav=/, '');
+	  element.tabChange('nav', layid);
+	  
+	  element.on('tab(nav)', function(elem){
+	    location.hash = 'nav='+ $(this).attr('lay-id');
+	  });
+	});
+</script>
+</html>

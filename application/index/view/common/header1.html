@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<title>上海协君投资咨询有限公司</title>
+    <meta content="上海协君投资咨询有限公司" name="description"/>
+    <meta content="上海协君投资咨询有限公司" name="keywords"/>
+	<meta name="author" content="攸攸网络-个性定制官网：www.yovyov.com">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 1170px)" href="__COMMON__css/body.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 1170px)" href="__COMMON__css/index.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1170px)" href="__COMMON__css/phbody.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1170px)" href="__COMMON__css/phindex.css">
+	<link rel="shortcut icon" href="__COMMON__images/favicon.ico"/>
+	<link rel="bookmark" href="__COMMON__images/favicon.ico"/>
+	<!-- Layui组件 -->
+	<link rel="stylesheet" href="__COMMON__layui/css/layui.css">
+	<script src="__COMMON__layui/layui.js" type="text/javascript"></script>
+	<!-- 移动端菜单 -->
+	<script type="text/javascript" src="__COMMON__js/jquery.js"></script>
+	<!-- 广告 -->
+	<script type="text/javascript" src="__COMMON__js/jquery.flexslider-min.js"></script>
+	<script> 
+	$(document).ready(function(){
+	  $("#topBtn").click(function(){
+	    $("#topBody").fadeToggle();
+	    var val=$("#topBtn").attr("class");
+	    if(val == 'phoneicon'){
+	    	$("#topBtn").removeClass().addClass('phoneicon_h');
+	    	$('html').addClass('noscroll');
+	    	$("#topBody").removeClass().addClass('menu');
+	    }else{
+	    	$("#topBtn").removeClass().addClass('phoneicon');
+	    	$('html').removeClass('noscroll');
+	    	$("#topBody").removeClass().addClass('menu1');
+	    }
+	  });
+	});
+	</script>
+	<!-- 视频弹出 -->
+	<script type="text/javascript" src="__COMMON__js/video.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<div class="pc-head-box">
+	<div class="pc-head-cent">
+		<div class="logo"><img src="__COMMON__images/logo.png" alt=""></div>
+		<div class="menu">
+			<div class="link">
+				<div class="code">
+					<img src="__COMMON__images/codeicon.png" alt="">
+					<div class="code-list-icon"><img src="__COMMON__images/codelisticon.png" alt=""></div>
+					<div class="code-list">
+						<ul>
+							<li><img src="__COMMON__images/codeimg.jpg" alt="">微信公众号</li>
+							<li><img src="__COMMON__images/codeimg.jpg" alt="">微信客服</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tel">
+					<img src="__COMMON__images/telicon.png" alt="">021-60613577
+				</div>
+				<div class="serch">
+					<form action="" class="layui-form">
+						<input type="text" placeholder="输入关键字搜索" lay-verify="title" autocomplete="off" >
+						<button lay-submit=""></button>
+					</form>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><span><a href="{:url('index/Index/index')}" class="nav">网站首页</a></span></li>
+					<li><span><a href="{:url('index/Index/about')}">机构介绍</a></span></li>
+					<li><span><a href="{:url('index/Index/product')}">业绩展示</a></span></li>
+					<li><span><a href="{:url('index/Index/server')}">专业服务</a></span></li>
+					<li><span><a href="{:url('index/Index/wisdom')}">机构智慧</a></span></li>
+					<li><span><a href="{:url('index/Index/team')}">核心团队</a></span></li>
+					<li><span><a href="{:url('index/Index/joinus')}">加入机构</a></span></li>
+					<li><span><a href="{:url('index/Index/news')}">行业动态</a></span></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<!-- 手机头部 -->
+<div class="ph-head-box">
+	<div class="logo"><img src="__COMMON__images/logo.png" alt=""></div>
+	<div class="phoneicon" id="topBtn">
+		<img src="__COMMON__images/phoneicon.png" class="center phicon1" alt="">
+	</div>
+	<div id="topBody">
+		<div class="layui-tab" lay-filter="nav">
+			<ul class="layui-tab-title">
+				<li lay-id="1"><a href="{:url('index/Index/index')}">网站首页</a></li>
+				<li lay-id="2"><span>机构介绍</span></li>
+				<li lay-id="3"><span>业绩展示</span></li>
+				<li lay-id="4"><span>专业服务</span></li>
+				<li lay-id="5"><span>机构智慧</span></li>
+				<li lay-id="6"><span>新闻中心</span></li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item">
+				</div>
+				<div class="layui-tab-item">
+					<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="{:url('index/Index/about')}#nav=2">公司简介</a></li>
+						<li><a href="{:url('index/Index/team')}#nav=2">核心团队</a></li>
+						<li><a href="{:url('index/Index/joinus')}#nav=2">加入机构</a></li>
+						<li><a href="{:url('index/Index/contact')}#nav=2">联系我们</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+			    	<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="{:url('index/Index/product')}#nav=3">片区开发PPP项目</a></li>
+						<li><a href="{:url('index/Index/product')}#nav=3">交通PPP项目</a></li>
+						<li><a href="{:url('index/Index/product')}#nav=3">市政公用事业PPP项目</a></li>
+						<li><a href="{:url('index/Index/product')}#nav=3">社会类PPP项目</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+					<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="{:url('index/Index/server')}#nav=4">PPP全生命周期</a></li>
+						<li><a href="{:url('index/Index/server')}#nav=4">工程全过程咨询</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+			    	<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="{:url('index/Index/wisdom')}#nav=5">文章</a></li>
+						<li><a href="{:url('index/Index/forum')}#nav=5">培训</a></li>
+						<li><a href="{:url('index/Index/video')}#nav=5">视频</a></li>
+						<li><a href="{:url('index/Index/books')}#nav=5">书籍</a></li>
+						<li><a href="{:url('index/Index/period')}#nav=5">刊期</a></li>
+			    	</div>
+				</div>
+				<div class="layui-tab-item">
+					<div class="submenu">
+			    		<button class="layui-btn site-demo-active" data-type="tabChange"></button>
+			    		<li><a href="{:url('index/Index/news')}#nav=6">行业动态</a></li>
+						<li><a href="{:url('index/Index/news')}#nav=6">政策法规</a></li>
+			    	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="head-box-white"></div>

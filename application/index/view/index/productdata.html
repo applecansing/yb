@@ -1,0 +1,30 @@
+{include file="common/header" /}
+<!-- 广告 -->
+<div class="pg-ban">
+	<img src="__COMMON__images/pgbanimg.jpg" alt="">
+</div>
+<div class="link-box">
+	<div class="link">
+		<img src="__COMMON__images/linkiconhome.gif" alt="" class="center">网站首页<img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>业绩展示</span><img src="__COMMON__images/linkicondot.gif" alt="" class="center"><span>片区开发PPP项目</span>
+	</div>
+</div>
+<!-- 简介 -->
+<div class="page-box">
+	<div class="page-submenu">
+		<div class="page-tit">
+			<div>业绩展示<br><span>Performance</span></div>
+		</div>
+		<ul>
+			{volist name="type" id="val"}
+			<li><a href="{:url('index/Index/product')}" {if condition="$val['id'] eq $id"}class="nav"{/if}>{$val.name}</a></li>
+		{/volist}
+		</ul>
+	</div>
+	<div class="about-title-en">{$uct.title}</div>
+	<div class="about-title">{$uct.time}</div>
+	<div class="news-txt">
+		{$uct.content}
+	</div>
+</div>
+<!-- 底部 -->
+{include file="common/footer" /}

@@ -1,0 +1,104 @@
+@charset='utf-8';
+/* 广告 */
+.pg-ban{ width: 100%; height: 190px; position: relative; overflow: hidden; }
+.pg-ban img{ width: 1920px; height: 190px; position: absolute; top: 0; left: 50%; margin-left: -960px; }
+
+.link-box{ width: 100%; height: 50px; line-height: 50px; background: #f8f8f8; }
+.link-box .link{ width: 1200px; height: 50px; margin: 0 auto; text-align: right; font-size: 13px;}
+.link-box .link img{ margin: 0 6px; vertical-align: top;}
+.link-box .link span{ color: #666; }
+
+.pagination{ width:100%; height: 30px; display: block; text-align: center; overflow: hidden;clear:both; padding-bottom: 60px;}
+.pagination li{ width: 30px; height: 30px; background: #f5f5f5; display: inline-block; margin-right: 2px; text-align: center; line-height: 30px;}
+.pagination li.active{ background:#0061c5; color: #fff;  }
+.pagination li:hover{ background: #0061c5; color: #fff;}
+.pagination li:hover a{ color: #fff; display: block; width: 100%; height: 30px; }
+.pagination li:hover a:hover{ color: #fff !important; }
+
+.about-title-en{ width: 100%; height: auto; font-size: 26px; padding-top: 40px; color: #333; text-transform: uppercase; box-sizing: border-box; padding-left: 220px; }
+.about-title{ width: 100%; height: auto; padding: 7px 0; font-size: #333; font-size: 14px; box-sizing: border-box; padding-left: 220px; }
+
+/* 简介 */
+.page-box{ width: 1200px; height: auto; margin: 0 auto; min-height: 300px; position: relative;}
+.page-box .page-submenu{ width: 180px; height: auto; position: absolute; top: -120px; left: 0; z-index: 3; }
+.page-box .page-submenu .page-tit{ width: 180px; height: 124px; background: #1d2088; box-sizing: border-box; padding-top: 36px; padding-left:34px; color: #fff; font-size: 18px;}
+.page-box .page-submenu .page-tit span{ font-size: 12px; text-transform: uppercase;}
+.page-box .page-submenu ul{ padding-top: 20px; }
+.page-box .page-submenu ul li{ display: block; width: 100%; height: 46px; margin-bottom: 5px;}
+.page-box .page-submenu ul li a{ display: block; width: 100%; height: 46px; line-height: 46px; text-align: center; }
+.page-box .page-submenu ul li a:hover {background: #e72c24; color: #fff !important;}
+.page-box .page-submenu ul li a.nav{background: #e72c24; color: #fff;}
+
+.about-txt{ width: 1200px; height: auto; padding-left: 220px; line-height: 28px; box-sizing: border-box; padding-top: 40px; padding-bottom: 60px; }
+.about-txt img{ max-width: 100%; display: block; }
+
+/* 业绩 */
+.news-list{ width: 980px; height: auto; overflow: hidden; padding-top: 30px; padding-left: 220px;}
+.news-list dl{ display: block; width: 980px; height: 170px; background: #f5f5f5; margin-bottom: 20px; }
+.news-list dl dt{ display: block; width: 240px; height: 170px; float: left; }
+.news-list dl dt img{ width: 240px; height: 170px; }
+.news-list dl dd{ display: block; width: 710px; padding-left: 30px; float: left;}
+.news-list dl dd a span{ display: block; width: 100%; height: auto; padding-top:20px; color: #999;}
+.news-list dl dd a h1{ display: block; width: 100%; height: auto; font-size: 18px; padding: 7px 0 15px 0; }
+.news-list dl dd a p{ display: block; width: 90%; height: auto; line-height: 24px; }
+
+.news-txt{ width: 1200px; height: auto; padding-left: 220px; box-sizing: border-box; padding-top: 40px; padding-bottom: 60px; line-height: 25px; }
+.news-txt img{ max-width: 100%; display: block; }
+
+.pg-wisdom-list{ width: 980px; height: auto; overflow: hidden; padding-top: 30px; padding-left: 220px;}
+.pg-wisdom-list dl{ display: block; width: 980px; height: 170px; background: #f5f5f5; margin-bottom: 20px; }
+.pg-wisdom-list dl dd{ display: block; width: 950px; padding-left: 30px; float: left;}
+.pg-wisdom-list dl dd a span{ display: block; width: 100%; height: auto; padding-top:20px; color: #999;}
+.pg-wisdom-list dl dd a h1{ display: block; width: 100%; height: auto; font-size: 18px; padding: 7px 0 15px 0; }
+.pg-wisdom-list dl dd a p{ display: block; width: 90%; height: auto; line-height: 24px; }
+
+/* 视频 */
+.video-list{ width: 980px; height: auto; overflow: hidden; padding-top: 30px; padding-left: 220px; padding-bottom: 30px;}
+.video-list ul li{ display: block; width: 230px; height: 210px; float: left; margin: 0 7px;}
+.video-list ul li img{ width: 230px; height: 160px; display: block; }
+.video-list ul li span{ display: block; width: 100%; height: 50px; line-height: 50px;text-overflow:ellipsis; white-space:nowrap; *white-space:nowrap; overflow:hidden; text-align: center; }
+
+.video{ background:rgba(0,0,0,0.85); width:100%; height:100%; position:fixed; top:0; left:0; z-index: 99; display: none;}
+.video_video{max-height: 80%; max-width: 80%;position:fixed; z-index:999; top:50%; left:50%; display: inline-block; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.video_xx{width: 100%; height:100%;position:fixed; z-index:998; left: 0; top: 0;}
+.video_xx a{ display: block; width: 100%; height: 100%;}
+
+/* 书籍 */
+.books-list{ width: 980px; height: auto; overflow: hidden; padding-top: 30px; padding-left: 220px;}
+.books-list dl{ display: block; width: 980px; height: 170px; background: #f5f5f5; margin-bottom: 20px; }
+.books-list dl dt{ display: block; width: 170px; height: 170px; float: left; }
+.books-list dl dt img{ width: 170px; height: 170px; }
+.books-list dl dd{ display: block; width: 780px; padding-left: 30px; float: left;}
+.books-list dl dd a span{ display: block; width: 100%; height: auto; padding-top:20px; color: #999;}
+.books-list dl dd a h1{ display: block; width: 100%; height: auto; font-size: 18px; padding: 7px 0 15px 0; }
+.books-list dl dd a p{ display: block; width: 90%; height: auto; line-height: 24px; }
+
+/* 团队 */
+.page-box .team-list{ width: 1200px; height: auto; margin: 0 auto; padding-top: 30px; box-sizing: border-box; padding-left: 230px; overflow: hidden;}
+.page-box .team-list dl{ display: block; width: 230px; height: 270px; float: left; margin-left: 12px; -webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease; cursor: pointer; margin-bottom: 40px;}
+.page-box .team-list dl dt{ width: 230px; height: 180px; overflow: hidden; }
+.page-box .team-list dl dt img{ width: 230px; height: 180px; -webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
+.page-box .team-list dl:hover dt img{-webkit-transform:scale(1.1);-moz-transform:scale(1.1);-o-transform:scale(1.1);transform:scale(1.1);-ms-transform:scale(1.1);}
+.page-box .team-list dl dd{ display: block; width: 230px; height: auto; box-sizing: border-box; padding: 15px; background: #fff; text-align: center;}
+.page-box .team-list dl dd .team-tit{ width: 100%; height: auto; color: #333; font-size: 18px; text-transform: uppercase;}
+.page-box .team-list dl dd .team-tui{ width: 100%; height: auto; padding-top: 5px; color: #777; font-size: 12px; }
+.page-box .team-list dl:hover{ box-shadow: 0 3px 5px rgba(0,0,0,0.3) }
+
+.team-text{ display: block; width: 1200px; height: auto; overflow: hidden; line-height: 31px; box-sizing: border-box; padding-left: 220px; padding-top: 40px; padding-bottom: 60px;}
+.team-text>dt{ display: block; width: 350px; height: auto; float: left; }
+.team-text>dt img{ width: 350px; }
+.team-text>dd{ display: block; width: 630px; height: auto; float: left; box-sizing: border-box; padding-left: 20px; }
+.team-text>dd .team-itt{ width: 100%; height: 40px; line-height: 40px; font-size: 24px; color: #333; }
+
+/* 联系我们 */
+.contact-tit{ width: 100%; height: auto; padding:40px 0 20px 0; font-size: 18px; color: #333; }
+.contact-tit span{ font-size: 14px; }
+.contact-list{ width: 100%; height: auto; line-height: 32px; color: #333; display: block;}
+.contact-list li{ width: 100%; height: 32px; }
+.contact-code{ width: 100%; height: auto; overflow: hidden; }
+.contact-code li{ display: block; width: 132px; height: 162px; line-height: 32px; float: left; text-align: center; margin-right: 30px; }
+.contact-code li img{ width: 132px; height: 132px; }
+.map{ width: 770px; height: 330px; }
+
+.contactnav{ margin-top: 15px; display: block; width: 128px; height: 34px; }
+.contact-txt{ width: 1200px; height: auto; padding-left: 220px; box-sizing: border-box; padding-top: 0; padding-bottom: 60px; }

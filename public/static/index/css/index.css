@@ -1,0 +1,67 @@
+@charset='utf-8';
+/* 首页公共 */
+.index-tit{ width: 100%; height: 50px; line-height: 50px; padding-bottom: 10px; font-size: 20px; font-weight: bold; color: #333; }
+.index-tit span{ font-size: 12px; color: #999; font-weight: normal; margin-left: 9px; padding-left: 9px; border-left: solid 1px #e8e8f1; }
+.index-tit a{ font-size: 12px; font-weight: normal; float: right; color: #999; }
+
+/* 列表 */
+.wisdow-white{ width: 100%; height: 20px; }
+
+.wisdow-list{ width: 100%; height: auto; overflow: hidden; border-bottom: solid 1px #e5e5e5; }
+.wisdow-list ul li{ display: block; width: 100%; height: 47px; border-top: solid 1px #e5e5e5; line-height: 47px; }
+.wisdow-list ul li a{ display: block; width: 75%; float: left; height: 47px;text-overflow:ellipsis; white-space:nowrap; *white-space:nowrap; overflow:hidden;}
+.wisdow-list ul li span{ display: block; width: 25%; height: 47px; float: left; text-align: right; color: #666; }
+
+/* 广告 */
+.banner-box{ width: 100%; height: 385px; overflow: hidden; position: relative; }
+#indexban{ width: 100%; height: 100%; position: relative; }
+#indexban .bannerimg{ width: 1920px; height: 385px; position: absolute; top: 0; left: 50%; margin-left: -960px; }
+.fontstxt1{ position: absolute; z-index: 2; width: 448px; height: 164px; top: 0; left: 50%; margin-left: -224px; animation: fadeInUp 0.5s linear 0s alternate forwards; opacity: 0;}
+.fontstxt2{ position: absolute; z-index: 3; width: 220px; height: 51px; top: 168px; left: 50%; margin-left: -110px; animation: fadeInUp 0.5s linear 0.5s alternate forwards; opacity: 0;}
+.fontstxt3{ position: absolute; z-index: 2; width: 446px; height: 90px; top: 192px; left: 50%; margin-left: -223px; animation: fadeInUp 0.5s linear 1s alternate forwards; opacity: 0;}
+
+/* 第一屏内容 */
+.first-box{ width: 1200px; height: auto; overflow: hidden; padding: 40px 0; margin: 0 auto; }
+.first-box .first-lft{ width: 344px; height: auto; float: left; }
+.first-box .first-lft .first-forum{ width: 344px; height: 240px; position: relative; margin-bottom: 20px;}
+.first-box .first-lft .first-forum .foumimg{ width: 344px; height: 240px; }
+.first-box .first-lft .first-forum a .foumtit{ width: 100%; height: 50px; background: rgba(0,0,0,0.8); position: absolute; bottom: 0; left: 0; box-sizing: border-box; padding: 0 130px 0 25px; line-height: 50px; color: #fff;}
+.first-box .first-lft .first-video{ width: 344px; height: 240px; }
+
+.video{ background:rgba(0,0,0,0.85); width:100%; height:100%; position:fixed; top:0; left:0; z-index: 99; display: none;}
+.video_video{max-height: 80%; max-width: 80%;position:fixed; z-index:999; top:50%; left:50%; display: inline-block; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.video_xx{width: 100%; height:100%;position:fixed; z-index:998; left: 0; top: 0;}
+.video_xx a{ display: block; width: 100%; height: 100%;}
+
+.first-box .first-cen{ width: 536px; height: auto; float: left; box-sizing: border-box; padding: 0 45px; }
+.first-box .first-rht{ width: 320px; height: auto; float: left; }
+.first-box .first-rht div dl{ display: block; width: 320px; height: 272px; position: relative; }
+.first-box .first-rht div dl dt{ display: block; width: 320px; height: 272px; }
+.first-box .first-rht div dl dt img{ width: 320px; height: 272px; }
+.first-box .first-rht div dl dd{ display: block; width: 100%; height: auto; box-sizing: border-box; padding: 20px; position: absolute; left: 0; bottom: 0; background: rgba(232,30,26,0.85); color: #fff;}
+.first-box .first-rht div dl dd p{ font-size: 13px; }
+.first-box .first-rht div dl dd span{ display: block; font-size: 18px; font-weight: bold; padding-bottom: 7px; }
+.first-box .first-rht div dl a:hover dd{ color: #fff; }
+.first-box .first-rht div dl:first-child{ margin-bottom: 20px; }
+.first-box .first-rht div dl:first-child dd{ background: rgba(24,27,120,0.85); }
+
+.first-box .first-lft .first-forum .layui-carousel-ind{ text-align: right !important; box-sizing: border-box; padding-right: 15px; }
+.first-box .first-lft .first-forum .layui-carousel-ind li{ background: #fff !important; }
+.first-box .first-lft .first-forum .layui-carousel-ind .layui-this{ background: #2f32a0 !important; }
+
+/* 第二屏内容 */
+.first-two-ban{ width: 1200px; height: 120px; margin: 0 auto; }
+.first-two-ban img{ width: 1200px; height: 120px; }
+
+/* 第三屏内容 */
+.boox-white{ width: 100%; height: 16px; }
+
+.book-list{ width: 344px; height: 256px; overflow: hidden; }
+.book-list dl{ display: block; width: 344px; height: 116px; margin-bottom: 12px; background: #f8f8f8;  overflow: hidden;}
+.book-list dl a{ display: block; width: 318px; height: 90px; margin: 13px auto; }
+.book-list dl a dt{ display: block; width: 90px; height: 90px; float: left; margin-right: 13px;}
+.book-list dl a dt img{ width: 90px; height: 90px; }
+.book-list dl a dd{ display: block; width: 215px; height: 90px; float: left; }
+.book-list dl a dd span{ display: block; width: 100%; height: auto; font-size: 16px; color: #333; padding-top: 3px;}
+.book-list dl a dd em{ display: block; width: 100%; height: auto; font-size: 12px; color: #999; font-style: normal;padding-top: 5px;}
+.book-list dl a dd p{ display: block; width: 100%; height: auto; font-size: 12px; color: #666; padding-top: 5px;}

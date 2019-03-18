@@ -1,0 +1,48 @@
+@charset='utf-8';
+body,html{ padding:0; margin:0; font-size:0.65em; color:#666; font-family:'微软雅黑'; }
+ul,li,p,h1,h2,h3,dl,dt,dd,input{ padding:0; margin:0; list-style:none;}
+a{ text-decoration:none; color:#666;}
+a:hover{ color: #cf001e; text-decoration: none; }
+.demo{ -webkit-transition:all .7s ease;-moz-transition:all .7s ease;transition:all .7s ease;}
+.clear{ clear:both;}
+img{ vertical-align:top; border:none;}
+input{font-family: '微软雅黑';}
+input:focus{ outline: none;}
+textarea:focus{ outline: none; }
+.center{position: relative; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
+
+body{
+	animation:myfirst 1s linear 0s 1 alternate running;
+	-moz-animation:myfirst 1s linear 0s 1 alternate running;
+	-webkit-animation:myfirst 1s linear 0s 1 alternate running;
+	-o-animation:myfirst 1s linear 0s 1 alternate running;
+	}
+@keyframes myfirst
+{
+0% {	 -webkit-filter : blur(1px);
+      filter : blur(1px);
+	}
+}
+input[type="submit"], input[type="reset"], input[type="button"], button { -webkit-appearance: none;}
+
+/* 头部 */
+.head_box{ width: 100%; height: 45px; background: #fff; position: fixed; top: 0; left: 0; z-index: 9; text-align: center;}
+.head_box a{ display: block; width: 34px; height: 34px; position: fixed; left: 5%; top: 5px; z-index: 10; }
+
+.menu_btn{ width: 31px; height: 45px; position: fixed; right: 5%; top: 0; background: url(../images/menu_icon.jpg) no-repeat left center; z-index: 11;}
+.menu_btn_h{ width: 25%; height: 100%; position: fixed; left: 0; top: 0; z-index: 13;}
+.menu_box{ width: 100%; height: 100%; background: rgba(0,0,0,0.5); position: fixed; top: 0; left: 0; overflow-y:auto; overflow-x:hidden; z-index: 12; display: none;}
+.menu_box .menu_list{ width: 75%; height: 100%; background: rgba(255,255,255,1); float: right;}
+.menu_box .menu_list ul li:first-child{ width: 85%; height: 45px; border-bottom: 1px #eee solid; padding-left: 15%;}
+.menu_box .menu_list ul li:first-child img{ max-height: 27px; }
+.menu_box .menu_list ul li{ width:95%; padding-left: 5%; height: 35px; border-bottom: solid 1px #eee; line-height: 35px; position: relative;}
+.menu_box .menu_list ul li span{ display: none; }
+.menu_box .menu_list ul .SubNav span{ display: block; position: absolute; right: 0; top: 0; width: 35px; height: 35px; }
+.menu_box .menu_list ul .submenu{ width: 90%; height: auto; padding-left: 10%; padding-top: 10px; padding-bottom: 10px; display: none; border-bottom: solid 1px #eee;}
+.menu_box .menu_list ul .submenu span{ display: block; width: 100%; height: 27px; line-height: 27px; color: #999;}
+.menu_box .menu_list ul .submenu span em{ font-style: normal; padding-right: 10px; }
+.menu_box .menu_list ul .submenu span a{ color: #999; }
+.menu_box .menu_list ul .submenu span a:hover{ color: #db6068; }
+
+/* 底部 */
+.bottom_box{ width: 90%; height: auto; padding: 15px 5%; background: #333; color: #aaa; text-align: center; line-height: 21px;}

@@ -1,0 +1,84 @@
+<div class="bottom">
+	<div class="bottom-box">
+		<div class="bottom-left">
+			<a href="{:url('index/Index/about')}">机构介绍</a>
+			<a href="{:url('index/Index/joinus')}">加入机构</a>
+			<a href="{:url('index/Index/contact')}">联系我们</a>
+			<span>{$title.copyright} {$title.keep} 攸攸网络 - 技术支持</span>
+		</div>
+		<div class="bottom-right">
+			<img src="__COMMON__images/codeiconbot.jpg" alt="">
+			<div class="bottom-codeicon"><img src="__COMMON__images/codeiconbot.png" alt=""></div>
+			<div class="bottom-code">
+				<ul>
+					<li><img src="{$ppp.img}" alt="">PPP运作实务</li>
+					<li><img src="{$rong.img}" alt="">融尔学苑</li>
+					<li><img src="{$zhou.img}" alt="">周月萍律师</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	layui.use('carousel', function(){
+	  var carousel = layui.carousel;
+	  //广告
+	  carousel.render({
+	    elem: '#indexban'
+	    ,width: '100%' 
+	    ,height:'100%'
+	    ,arrow: 'none'
+	    ,indicator:'none'
+	    ,anim:'fade'
+	  });
+	  //论坛
+	  carousel.render({
+	    elem: '#forum'
+	    ,width: '100%' 
+	    ,height:'100%'
+	    ,arrow: 'none'
+	    ,indicator:'inside'
+	    ,anim:'left'
+	  });
+	});
+	//搜索
+	layui.use(['form', 'layedit', 'laydate'], function(){
+	  var form = layui.form
+	  ,layer = layui.layer
+	  ,layedit = layui.layedit
+	  ,laydate = layui.laydate;
+	  form.verify({
+	    title: function(value){
+	      if(value.length < 2){
+	        return '请输入搜索关键词';
+	      }
+	    }
+	  });
+	});
+	//二级菜单
+	layui.use('element', function(){
+	  var $ = layui.jquery
+	  ,element = layui.element;
+	  //触发事件
+	  var active = {
+	    tabChange: function(){
+	      //切换到指定Tab项
+	      element.tabChange('nav', '1'); //切换到：用户管理
+	    }
+	  };
+	  
+	  $('.site-demo-active').on('click', function(){
+	    var othis = $(this), type = othis.data('type');
+	    active[type] ? active[type].call(this, othis) : '';
+	  });
+	  //Hash地址的定位
+	  var layid = location.hash.replace(/^#nav=/, '');
+	  element.tabChange('nav', layid);
+	  
+	  element.on('tab(nav)', function(elem){
+	    location.hash = 'nav='+ $(this).attr('lay-id');
+	  });
+	});
+</script>
+</html>
